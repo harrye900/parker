@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: payment-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/harrye900/parker.git
+    targetRevision: HEAD
+    path: argocd-demo
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: canary-demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
