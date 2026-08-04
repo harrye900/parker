@@ -4,7 +4,7 @@ metadata:
   name: payment-v1
   namespace: canary-demo
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: payment
