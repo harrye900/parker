@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: labor
-          image: hashicorp/http-echo:1.2
+          image: hashicorp/http-echo:1.0
           args:
             - "-text=labor service version 1"
           ports:
