@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/harrye900/parker.git
     targetRevision: HEAD
-    path: argocd-demo
+    path: argocd-demo/labor
   destination:
     server: https://kubernetes.default.svc
     namespace: canary-demo
