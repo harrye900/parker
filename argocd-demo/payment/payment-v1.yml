@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-v1
+  namespace: canary-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: payment
+        version: v1
+    spec:
+      containers:
+        - name: payment
+          image: hashicorp/http-echo:1.0
+          args:
+            - "-text=payment service version 1"
+          ports:
+            - containerPort: 5678
