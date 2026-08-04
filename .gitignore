@@ -1,0 +1,4 @@
+minikube.exe
+packer.exe
+*.exe
+*.zip
